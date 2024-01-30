@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+
+    background-color: #003366;
+    padding: 15px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.main {
+    padding: 20px;
+
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.main-container > div {
+    margin: 10px; /* Puedes ajustar el valor según sea necesario */
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Cambiado a 100% para ocupar el ancho completo en dispositivos pequeños */
+    margin-bottom: 20px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+}
+
+.brand {
+    color: #003366;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.model {
+    color: #003366;
+    font-size: 16px;
+}
+
+.card-content {
+    display: flex;
+    padding: 15px;
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    margin-right: var(--spacing);
+  }
+  
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+.card-image-icon {
+    margin-right: 15px;
+}
+
+.card-image-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    /* Otras propiedades según sea necesario */
+}
+.card-footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-button {
+    background-color: #fff;
+    color: #333;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+} 
+.card-property {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.icon-car img {
+
+    width: 100px;
+    height: 35px;
+    animation: mover 6s linear;
+    filter: brightness(0) invert(1);
+}
+
+@keyframes mover {
+    to {
+        transform: translateX(100vw);
+    }
+}
+@media screen and (min-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+      }
+    .card-image img {
+        width: 48%;  /* Puedes realizar ajustes específicos para la imagen en dispositivos móviles */
+    }
+
+    .card {
+        width: 48%; /* Restaurar el tamaño original en pantallas más grandes */
+    }
+    
+    .card-info {
+        flex-direction: row;
+        justify-content: space-between; /* Espaciado entre elementos en la dirección principal (fila) */
+    }
+
+    .card-property {
+        align-items: flex-start; /* Alinear a la izquierda en la dirección principal (fila) */
+        margin-right: 20px; /* Espaciado entre la imagen y la información en pantallas más grandes */
+    }
+    .nav {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: row;
+    }
+
+
+
+}
+
+
+

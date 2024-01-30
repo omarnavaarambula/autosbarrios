@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #f1f1f1;
+    --accent-color: #ff6347;
+    --font-family: Arial, sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+    --spacing: 20px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: var(--primary-color);
+    padding: var(--spacing);
+  }
+  .brand {
+    color: #003366;
+    font-size: 40px;
+    font-weight: bold;
+}
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: #ffffff;
+    padding: 0 var(--spacing);
+    cursor: pointer;
+  }
+  
+  .main {
+    padding: var(--spacing);
+  }
+  
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: var(--spacing);
+  }
+  
+  .card {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
+  
+  .card-content {
+    display: flex;
+    padding: var(--spacing);
+  }
+  
+  .card-image {
+    margin-right: var(--spacing);
+  }
+  
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+
+
+  .card-imageTwo {
+    margin-left: var(--spacing);
+  }
+  
+  .card-imageTwo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+
+  .card-info {
+    flex: 1;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .main-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card-image-icon {
+    margin-right: 15px;
+}
+
+.card-image-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
